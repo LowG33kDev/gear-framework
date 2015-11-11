@@ -54,7 +54,7 @@ class DIContainer implements ArrayAccess
      *
      * @param string $offset
      *
-     * @return mixed
+     * @return boolean
      */
     public function offsetExists($offset)
     {
@@ -132,7 +132,7 @@ class DIContainer implements ArrayAccess
     /**
      * Magic method. Set data like an object property.
      *
-     * @param string $key
+     * @param string $offset
      * @param mixed $value
      *
      * @return void

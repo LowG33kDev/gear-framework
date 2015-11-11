@@ -17,7 +17,7 @@ class Template
 {
 
     /**
-     * @var \Gea\View\View $view
+     * @var \Gear\View\View $view
      */
     protected $view = null;
 
@@ -191,7 +191,7 @@ class Template
     /**
      * Fetch a partial view.
      *
-     * @param string $template Template needed to render.
+     * @param string $partial Partial view needed to render.
      * @param array $data Data send to partial view.
      *
      * @return string Content of rendering.
@@ -204,7 +204,7 @@ class Template
     /**
      * Render a partial view.
      *
-     * @param string $template Template needed to render.
+     * @param string $partial Partial view needed to render.
      * @param array $data Data send to partial view.
      *
      * @return void

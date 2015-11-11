@@ -33,7 +33,7 @@ class Router
      * @param callable $callable
      * @param string|array $methods
      *
-     * @return \Gear\Routing\Router Self instance.
+     * @return Route
      */
     public function addRoute($path, $callable, $methods = 'GET')
     {

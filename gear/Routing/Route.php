@@ -54,8 +54,6 @@ class Route
      * @param string $path Route path.
      * @param callable $callable Callback used when call this route.
      * @param string|array HTTP Verb or array with HTTP verbs accepted. '*' for all HTTP verbs.
-     *
-     * @return void
      */
     public function __construct($path, $callable, $methods = 'GET')
     {

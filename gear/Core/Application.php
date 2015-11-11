@@ -14,6 +14,10 @@ use \Gear\Routing\Router;
 
 /**
  * This class is base of application.
+ *
+ * @property \Gear\Routing\Router $router Application router.
+ * @property \Gear\Network\Request $defaultRequest
+ * @property string $responseClass
  */
 class Application extends DIContainer
 {
@@ -44,7 +48,7 @@ class Application extends DIContainer
      */
     protected function initialize()
     {
-        $this->default_request = $this->factory(function () {
+        $this->defaultRequest = $this->factory(function () {
             return new Request();
         });
 
@@ -52,7 +56,7 @@ class Application extends DIContainer
             return new Router();
         };
 
-        $this->response_class = '\\Gear\\Network\\Response';
+        $this->responseClass = '\\Gear\\Network\\Response';
     }
 
     /**
@@ -65,7 +69,7 @@ class Application extends DIContainer
     public function start(Request $request = null)
     {
         if ($request === null || !($request instanceof Request)) {
-            $request = $this->default_request;
+            $request = $this->defaultRequest;
         }
 
         $this->router->run($request);
