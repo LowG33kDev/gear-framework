@@ -103,7 +103,8 @@ class Request
         if (strpos($this->url, '?') !== false) {
             $this->url = str_replace('?'.$this->getValue('QUERY_STRING', ''), '', $this->url);
         }
-        if (!empty(trim($this->url, '/'))) {
+        $this->url = trim($this->url, '/');
+        if (!empty($this->url)) {
             $this->url = '/' . trim($this->url, '/') . '/';
         }
         if (empty($this->url)) {
