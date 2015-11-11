@@ -15,3 +15,7 @@ script:
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+
+addons:
+    code_climate:
+        repo_token: 5291484e15fc65c46420466bd96af82782f25a17c64e1ad618bc79feaeda0722
