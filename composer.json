@@ -1,0 +1,33 @@
+{
+    "name": "lowg33kdev/gear-framework",
+    "version": "0.1.0",
+    "description": "A light PHP framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LowG33kDev",
+            "email": "loic.marchand73.dev@gmail.com",
+			"role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+	"autoload": {
+		"psr-4": {
+			"Gear\\": "gear/"
+		},
+		"files": [
+			"gear/autoload.php"
+		]
+	},
+	"autoload-dev" :{
+		"psr-4": {
+			"Gear\\Test\\": "tests/"
+		}
+	}
+}
