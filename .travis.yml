@@ -10,7 +10,8 @@ before_script:
     - travis_retry composer install --no-interaction --prefer-source --dev
 
 script:
-    - phpunit
+    - phpunit --coverage-text --coverage-clover=coverage.clover
+    - phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
